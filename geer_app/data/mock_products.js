@@ -1,4 +1,5 @@
-export let products = [
+
+const products = [
 // Rings 
   {  
     id: 101,
@@ -69,10 +70,10 @@ export let products = [
       ] },
      
        { color: "#F8D0B6", colorName: "Rose Gold", images: [
-        "https://geer.in/cdn/shop/files/GJLR-229_R1.jpg?v=1750235308",
-        "https://geer.in/cdn/shop/files/GJLR-229_R3.jpg?v=1750235308",
-        "https://geer.in/cdn/shop/files/GJLR-229_R3.jpg?v=1750235308",
-        "https://geer.in/cdn/shop/files/GJLR-229_R4.jpg?v=1750235308"
+        "https://geer.in/cdn/shop/files/GJLR-229_R1.jpg?v=1750332803",
+        "https://geer.in/cdn/shop/files/GJLR-229_R2.jpg?v=1750332803",
+        "https://geer.in/cdn/shop/files/GJLR-229_R3.jpg?v=1750332803",
+        "https://geer.in/cdn/shop/files/GJLR-229_R4.jpg?v=1750332803"
       ] },
 
     ]
@@ -93,7 +94,7 @@ export let products = [
     metalQuality: ["14K", "18K",],
     variants: [
       { color: "#F5DC98", colorName: "Yellow Gold", images: [
-        "https://geer.in/cdn/shop/files/GJLR-202_Y2.jpg?v=1750333081",
+        "https://geer.in/cdn/shop/files/GJLR-202_Y1.jpg?v=1750333081",
          "https://geer.in/cdn/shop/files/GJLR-202_Y2.jpg?v=1750333081",
         "https://geer.in/cdn/shop/files/GJLR-202_Y3.jpg?v=1750333081",
         "https://geer.in/cdn/shop/files/GJLR-202_Y4.jpg?v=1750333081"
@@ -209,7 +210,7 @@ export let products = [
     metalQuality: ["14K", "18K",],
     variants: [
       { color: "#F5DC98", colorName: "Yellow Gold", images: [
-        "https://geer.in/cdn/shop/files/GJLR-202_Y2.jpg?v=1750333081",
+        "https://geer.in/cdn/shop/files/GJLR-202_Y1.jpg?v=1750333081",
          "https://geer.in/cdn/shop/files/GJLR-202_Y2.jpg?v=1750333081",
         "https://geer.in/cdn/shop/files/GJLR-202_Y3.jpg?v=1750333081",
         "https://geer.in/cdn/shop/files/GJLR-202_Y4.jpg?v=1750333081"
@@ -262,7 +263,7 @@ export let products = [
       ] },
 
        { color: "#F8D0B6", colorName: "Rose Gold", images: [
-        "https://geer.in/cdn/shop/files/GJER-083_R2.jpg?v=1750236436",
+        "https://geer.in/cdn/shop/files/GJER-083_R1.jpg?v=1750236436",
         "https://geer.in/cdn/shop/files/GJER-083_R2.jpg?v=1750236436",
         "https://geer.in/cdn/shop/files/GJER-083_R3.jpg?v=1750236436"
       ] },
@@ -371,11 +372,10 @@ export let products = [
       ] },
 
        { color: "#F8D0B6", colorName: "Rose Gold", images: [
-        "https://geer.in/cdn/shop/files/GJER-083_R2.jpg?v=1750236436",
+        "https://geer.in/cdn/shop/files/GJER-083_R1.jpg?v=1750236436",
         "https://geer.in/cdn/shop/files/GJER-083_R2.jpg?v=1750236436",
         "https://geer.in/cdn/shop/files/GJER-083_R3.jpg?v=1750236436"
       ] },
-
     ]
   },
 
@@ -682,3 +682,6 @@ export let products = [
   },
 
 ];
+
+
+export const inMemoryProducts = [...products];

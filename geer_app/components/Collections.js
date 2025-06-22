@@ -1,4 +1,4 @@
- const collections = [
+const collections = [
   {
     img: "https://geer.in/cdn/shop/collections/valentine_collection.webp?v=1741158446&width=1070",
     title: "EVERYDAY ROMANCE",
@@ -23,7 +23,7 @@ export default function Collections() {
       <h2 className="text-2xl text-black md:text-3xl font-bold text-center mb-8" style={{ fontFamily: "i" }}>
         Explore Collections
       </h2>
-      <div className="flex gap-8 overflow-x-auto px-2 md:justify-center">
+      <div className="flex gap-4 md:gap-8 overflow-x-auto px-2 md:justify-center scrollbar-hide">
         {collections.map((col, idx) => (
           <div
             key={col.title}
@@ -31,7 +31,7 @@ export default function Collections() {
               ${idx % 2 === 0 ? "mt-16" : "mb-6"}`}
           >
             <div
-              className="w-36 h-28 md:w-64 md:h-76 rounded-[50%/40%] border border-black/35 overflow-hidden bg-gray-100 flex items-center justify-center mb-3 shadow-sm"
+              className="w-38 h-48 md:w-64 md:h-76 rounded-[50%/40%] border border-black/35 overflow-hidden bg-gray-100 flex items-center justify-center mb-3 shadow-sm"
               style={{ aspectRatio: "4/3" }}
             >
               <img

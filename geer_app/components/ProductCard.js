@@ -17,7 +17,7 @@ export default function ProductCard({ product }) {
   const variant = product.variants[activeColor];
 
   return (
-    <div className="bg-white border border-black/10 rounded-xl shadow-sm hover:shadow-md transition relative flex flex-col group">
+    <div className="relative bg-white border border-black/10 rounded-xl shadow-sm hover:shadow-md transition  flex flex-col min-w-[180px] sm:min-w-0">
       {/* Discount badge */}
       {discount > 0 && (
         <span className="absolute top-3 left-3 bg-[#4A4947] text-white text-xs px-2 py-1 rounded-lg">
@@ -26,25 +26,14 @@ export default function ProductCard({ product }) {
       )}
 
       {/* Wishlist */}
-      <div className="absolute top-3 right-3 flex flex-col items-center z-10">
-        <div className="relative flex flex-col items-center">
-          {/* Tooltip */}
-          <span
-            className={`
-              absolute -top-8 right-1/2 translate-x-1/2
-              bg-gray-700 text-white text-xs px-3 py-1 rounded shadow
-              whitespace-nowrap pointer-events-none
-              opacity-0 group-hover:opacity-100 group-focus-within:opacity-100
-              transition-opacity duration-200
-            `}
-            style={{ zIndex: 20 }}
-          >
-            {wish ? "Remove from Wishlist" : "Add to Wishlist"}
-            {/* Arrow */}
-            <span className="absolute left-1/2 -bottom-1 -translate-x-1/2 w-3 h-3 bg-gray-700 rotate-45 -z-10"></span>
-          </span>
+      <div className="absolute top-3 mr-6 right-3 flex flex-col items-center z-10">
+        <div className="relative flex flex-col items-center">  
           <button
             className="text-2xl transition flex items-center justify-center group"
+            onMouseEnter={() => setIsModalVisible(true)}
+            onMouseLeave={() => setIsModalVisible(false)}
+            onFocus={() => setIsModalVisible(true)}
+            onBlur={() => setIsModalVisible(false)}
             onClick={() => setWish((w) => !w)}
             aria-label={wish ? "Remove from Wishlist" : "Add to Wishlist"}
             tabIndex={0}
@@ -54,26 +43,23 @@ export default function ProductCard({ product }) {
             ) : (
               <FiHeart className="text-black" />
             )}
+        
+            <span
+              className={`
+                absolute -top-8 right-1/2 translate-x-1/2
+                bg-gray-700 text-white text-xs px-3 py-1 rounded shadow
+                whitespace-nowrap pointer-events-none
+                transition-opacity duration-200
+                ${isModalVisible ? "opacity-100" : "opacity-0"}
+              `}
+              style={{ zIndex: 20 }}
+            >
+              {wish ? "Remove from Wishlist" : "Add to Wishlist"}
+              <span className="absolute left-1/2 -bottom-1 -translate-x-1/2 w-3 h-3 bg-gray-700 rotate-45 -z-10"></span>
+            </span>
           </button>
         </div>
       </div>
-
-      {isModalVisible && 
-       <span
-          className={`
-            bg-black text-white text-[11px] px-2 py-0.5 rounded mb-1 shadow text-center whitespace-nowrap
-            transition-opacity duration-200
-            ${wish
-              ? "opacity-0 group-hover:opacity-100"
-              : "opacity-0 group-hover:opacity-100"}
-          `}
-        >
-          {wish ? "Remove from Wishlist" : "Add to Wishlist"}
-        </span>
-
-      }
-
-      
 
       {/* Product Image */}
       <Link href={`/products/${product.id}`}>

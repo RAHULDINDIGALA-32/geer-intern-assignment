@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import ExploreCollections from "../components/ExploreCollections";
+import ExploreCollections from "../components/Collections";
 import BestSeller from "../components/BestSeller";
 import ShopByPrice from "../components/ShopByPrice";
 import Essentials from "../components/Essentials";

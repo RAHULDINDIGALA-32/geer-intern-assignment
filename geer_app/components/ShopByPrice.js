@@ -25,7 +25,7 @@ const prices = [
 
 export default function ShopByPrice() {
   return (
-    <section className="w-full py-8 px-14 " style={{ fontFamily: "i" }}>
+    <section className="w-full py-8 px-0 md:px-14 sm:px-14 " style={{ fontFamily: "i" }}>
       <h2 className="text-center text-2xl text-black md:text-3xl font-bold  mb-10">Shop By Price</h2>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-3 px-4">
         {prices.map((item) => (

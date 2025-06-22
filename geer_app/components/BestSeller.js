@@ -18,7 +18,7 @@ export default function BestSeller({ products = [] }) {
 
   return (
     <section className="w-full my-12">
-      <h2 className="text-2xl text-black md:text-3xl font-bold text-center mb-2" style={{ fontFamily: "i" }}>
+      <h2 className="text-3xl  text-black md:text-3xl font-bold text-center mb-2" style={{ fontFamily: "i" }}>
         Best Seller
       </h2>
       <div className="relative ml-12 mr-12">
